@@ -6,11 +6,11 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: '<your-key>',
-    authDomain: '<your-project-authdomain>',
-    databaseURL: '<your-database-URL>',
-    projectId: '<your-project-id>',
-    storageBucket: '<your-storage-bucket>',
-    messagingSenderId: '<your-messaging-sender-id>'
+    apiKey: 'AIzaSyB_482PHeroT_R4R68aG14dtlirpFzoFtw',
+    authDomain: 'hackaton-17e3d.firebaseapp.com',
+    databaseURL: 'https://hackaton-17e3d.firebaseio.com',
+    projectId: 'hackaton-17e3d',
+    storageBucket: 'hackaton-17e3d.appspot.com',
+    messagingSenderId: '647009162703'
   }
 };
