@@ -6,7 +6,7 @@ import {MaterialModule} from './material.module';
 import {Routes, RouterModule} from "@angular/router";
 import { AngularFireModule } from 'angularfire2';
 
-
+import { environment } from '../environments/environment';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -30,15 +30,15 @@ const routes: Routes = [
     FooterComponent,
     BodyComponent,
     HomeParallaxComponent,
-    AssistentesComponent,
-    AngularFireModule.initializeApp(environment.firebase)
+    AssistentesComponent
   ],
   imports: [
     BrowserModule,
     MaterializeModule,
     BrowserAnimationsModule,
     MaterialModule,
-    RouterModule.forRoot(routes, {useHash: true})
+    RouterModule.forRoot(routes, {useHash: true}),
+    AngularFireModule.initializeApp(environment.firebase)
   ],
   providers: [],
   bootstrap: [AppComponent]
