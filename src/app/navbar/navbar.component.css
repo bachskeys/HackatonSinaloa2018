@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Arvo|Noto+Serif');
+@import url('https://fonts.googleapis.com/css?family=Rubik:900');
+
+a.slogan-sisei{
+color:black-text;
+position: absolute;
+left:600px;
+font-family: 'Rubik', sans-serif;
+font-size: 35px;
+border-color: white;
+border-radius: 2px;
+
+
+
+}
