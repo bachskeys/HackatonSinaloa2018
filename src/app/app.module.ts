@@ -6,6 +6,16 @@ import {MaterialModule} from './material.module';
 import {Routes, RouterModule} from "@angular/router";
 import { AngularFireModule } from 'angularfire2';
 
+import { AngularFireStorageModule } from 'angularfire2/storage';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { Observable } from 'rxjs/Observable';
+import { AngularFirestore,AngularFirestoreCollection } from 'angularfire2/firestore';
+
+
+import { AngularFirestoreModule } from 'angularfire2/firestore';
+
+
+
 import { environment } from '../environments/environment';
 
 import { AppComponent } from './app.component';
@@ -33,12 +43,16 @@ const routes: Routes = [
     AssistentesComponent
   ],
   imports: [
+  
     BrowserModule,
     MaterializeModule,
     BrowserAnimationsModule,
     MaterialModule,
     RouterModule.forRoot(routes, {useHash: true}),
-    AngularFireModule.initializeApp(environment.firebase)
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule, // imports firebase/firestore, only needed for database features
+    AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
+    AngularFireStorageModule // imports firebase/storage only needed for storage features
   ],
   providers: [],
   bootstrap: [AppComponent]
