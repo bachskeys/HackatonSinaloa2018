@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { MaterializeModule } from 'angular2-materialize';
 import {MaterialModule} from './material.module';
 import {Routes, RouterModule} from "@angular/router";
+import { AngularFireModule } from 'angularfire2';
 
 
 
@@ -29,7 +30,8 @@ const routes: Routes = [
     FooterComponent,
     BodyComponent,
     HomeParallaxComponent,
-    AssistentesComponent
+    AssistentesComponent,
+    AngularFireModule.initializeApp(environment.firebase)
   ],
   imports: [
     BrowserModule,
