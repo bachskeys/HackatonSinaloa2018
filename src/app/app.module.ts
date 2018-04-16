@@ -27,6 +27,8 @@ import { HomeParallaxComponent } from './Body/home-parallax/home-parallax.compon
 import { AssistentesComponent } from './Body/assistentes/assistentes.component';
 import { FacebookService, InitParams } from 'ngx-facebook';
 
+import {FbsService} from './services/fbs.service';
+
 
 
 
@@ -59,7 +61,7 @@ const routes: Routes = [
     AngularFireStorageModule, // imports firebase/storage only needed for storage features
     
   ],
-  providers: [],
+  providers: [FbsService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
