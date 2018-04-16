@@ -48,7 +48,7 @@
   <ul class="collection col s5">
     <li class="collection-header"><h4>Reseñas</h4></li>
     <li class="collection-item avatar" *ngFor="let r of reviews | async">
-      <img src="https://scontent.fcul1-1.fna.fbcdn.net/v/t1.0-9/12002856_10203328537214285_8755806782546478108_n.jpg?_nc_cat=0&_nc_eui2=v1%3AAeGDFpZjorBZbz1HjqFOSFUg7cSFd9tos1sLz4x02ZTKkmC3d3VeYiJinB3YyKmK389lorhhG4LuCn4Rh7sVjYj-yLOKR9VlEGhWQIaEmOSDBA&oh=4ea2107f37b21b4880151a7d824a6cf9&oe=5B27DB01" alt="" class="circle">
+      <img src={{r.Imagen}} alt="" class="circle">
       <p class="title">
         <b>{{r.Autor}}</b> 
         <span class="grey-text text-lighten-1 right">{{r.Fecha | date}}</span>
