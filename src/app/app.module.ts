@@ -30,48 +30,36 @@ import { FacebookService, InitParams } from 'ngx-facebook';
 
 
 const routes: Routes = [
-{ path: '', component: HomeParallaxComponent },
-{ path: 'Register', component: AssistentesComponent },
+ { path: '', component: HomeParallaxComponent },
+  { path: 'Register', component: AssistentesComponent },
 
 ];
 
 
 @NgModule({
   declarations: [
-  AppComponent,
-  NavbarComponent,
-  FooterComponent,
-  BodyComponent,
-  HomeParallaxComponent,
-  AssistentesComponent
+    AppComponent,
+    NavbarComponent,
+    FooterComponent,
+    BodyComponent,
+    HomeParallaxComponent,
+    AssistentesComponent
   ],
   imports: [
   
-  BrowserModule,
-  MaterializeModule,
-  BrowserAnimationsModule,
-  MaterialModule,
-  RouterModule.forRoot(routes, {useHash: true}),
-  AngularFireModule.initializeApp(environment.firebase),
+    BrowserModule,
+    MaterializeModule,
+    BrowserAnimationsModule,
+    MaterialModule,
+    RouterModule.forRoot(routes, {useHash: true}),
+    AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
-    AngularFireStorageModule // imports firebase/storage only needed for storage features
+    AngularFireStorageModule, // imports firebase/storage only needed for storage features
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {
-  constructor(private fb: FacebookService) {
 
-    let initParams: InitParams = {
-      appId: '1104667049669679',
-      xfbml: true,
-      version: 'v2.8'
-    };
-
-    fb.init(initParams);
-
-  }
-
-
-}
+ }
