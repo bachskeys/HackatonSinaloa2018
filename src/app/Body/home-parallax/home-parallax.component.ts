@@ -11,6 +11,7 @@ import { AuthService } from 'app/services/auth.service';
 
 
 
+
 @Component({
 	selector: 'app-home-parallax',
 	templateUrl: './home-parallax.component.html',
@@ -20,26 +21,31 @@ export class HomeParallaxComponent  {
 	
 	 email: string;
   password: string;
+  public user:boolean;
 
   constructor(public authService: AuthService) {}
 
   signup() {
     this.authService.signup(this.email, this.password);
     this.email = this.password = '';
+    this.user=true;
   }
 
   login() {
     this.authService.login(this.email, this.password);
-    this.email = this.password = '';    
+    this.email = this.password = '';   
+      this.user=true; 
   }
 
   logout() {
     this.authService.logout();
+      this.user=false;
   }
   loginWithFaceBook(){
 
 
    this.authService.loginWithFaceBook();
+     this.user=true;
 
 
   }

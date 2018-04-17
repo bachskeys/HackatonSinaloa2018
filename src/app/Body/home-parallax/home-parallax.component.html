@@ -1,10 +1,10 @@
 <div class="image">
     
-      <div id ="welcomeText"class="row"  >
-        <div class="text col s4 offset-s4" style="border-radius:50px;">
-        	<div id="modalInicioSesion" class="modal" materialize="modal" >
-    <div class="modal-content">
-      <h6 style="text-align: center" *ngIf="!authService.user | async"><b>Iniciar Sesión</b></h6>
+<div id ="welcomeText"class="row"  >
+<div class="text col s4 offset-s4" style="border-radius:50px;">
+  <div id="modalInicioSesion" class="modal" materialize="modal" *ngIf="!user" >
+    <div class="modal-content" >
+      <h6 style="text-align: center" ><b>Iniciar Sesión</b></h6>
       <p class="row">
               <a style="align-content: center" class="waves-effect waves-light btn botonLoginFace" 
               (click)="loginWithFaceBook()"><i></i>Ingresar con Facebook</a> <BR> <BR>
@@ -22,14 +22,15 @@
                       </div>
                   </div>
               </a>
-              <a class="col s3 offset-s2 waves-effect waves-light btn botonLogin" (click)="login()"><i class="material-icons left"  ></i>Iniciar sesión</a> <BR>
+              <a class="col s3 offset-s2 waves-effect waves-light btn botonLogin" (click)="login()"><i class="material-icons left"   ></i>Iniciar sesión</a> <BR>
       </p>
+
     </div>
     
 </div>
 
 <!-- ModalR Structure -->
-<div id="modalRegistro" class="modal" materialize="modal" >
+<div id="modalRegistro" class="modal" materialize="modal" *ngIf="!user" >
     <div class="modal-content">
       <h4>Modal Header</h4>
       <p>A bunch of text</p>
@@ -40,6 +41,13 @@
 </div>
 
             <h3 class="center"> Welcome!</h3> 
+      <nav *ngIf="user">
+        <ul id="slide-out" class="side-nav fixed">
+          <li  *ngFor="let routeName of routeNames" routerLinkActive="active"><a [routerLink]="[routeName]"></a></li>
+        </ul>
+        <a materialize="sideNav" [materializeParams]="[{edge:'left'}]" href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="mdi-navigation-menu"></i></a>
+        <a materialize="sideNav" [materializeParams]="[{edge:'left'}]" href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="mdi-navigation-menu"></i></a>
+      </nav>
 
 
         </div>
