@@ -1,0 +1,96 @@
+.image{
+     height:40em; background-size:cover; width:auto;
+     background-image:url('assets/img/OCRS5G0.jpg');
+     background-position:50% 50%;
+   }
+
+ #welcomeText{
+
+
+		padding-top: 170px;
+
+ }
+
+ @import url('https://fonts.googleapis.com/css?family=Arvo|Noto+Serif');
+@import url('https://fonts.googleapis.com/css?family=Rubik:900');
+
+a.slogan-sisei{
+color:black-text;
+position: absolute;
+left:600px;
+font-family: 'Roboto', sans-serif;
+font-size: 35px;
+border-color: white;
+border-radius: 2px;
+
+}
+.modal{
+    z-index: 1004;
+}
+div.modal-overlay{
+    z-index: 17500 !important;
+    
+}
+
+#modalInicioSesion.modal{
+
+ height:700px  !important ;
+ width: 300px !important;
+border-radius: 10px;
+
+}
+#modalRegistro.modal{
+
+ height:700px  !important ;
+ width: 300px !important;
+border-radius: 10px;
+}
+
+.botonLoginFace{
+    height:30px  !important ;
+    width: 260px !important;
+    border-radius: 8px;
+    background-color: #395398;
+    font-size: 14px;
+    font-family: 'Roboto';
+}
+
+.botonLoginGmail{
+    height:30px  !important ;
+    width: 260px !important;
+    border-radius: 8px;
+    background-color: #C71610;
+    font-size: 14px;
+    font-family: 'Roboto';
+}
+
+.botonLogin{
+    height:40px  !important ;
+    width: 180px !important;
+    border-radius: 8px;
+    background-color: #00B524;
+    font-size: 14px;
+    font-family: 'Roboto';
+    align-content: center;
+}
+
+.botonRegistrarse{
+    height:40px  !important ;
+    width: 90px !important;
+    border-radius: 8px;
+    background-color: #00B524;
+    font-size: 14px;
+    font-family: 'Roboto';
+    align-content: center;
+}
+
+.botonCancelar{
+    height:40px  !important ;
+    width: 90px !important;
+    border-radius: 8px;
+    background-color: rgb(181, 6, 0);
+    font-size: 14px;
+    font-family: 'Roboto';
+    align-content: center;
+}
+

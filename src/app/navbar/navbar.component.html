@@ -8,13 +8,15 @@
         </a>
         <div class="row">
           <ul id="nav-mobile" class="center col s2 offset-s4">
-            <li><button mat-button routerLink="/Register" routerLinkActive="active" class="white-text"> Iniciar Sesión</button></li>
+            <li><button mat-button class="modal-trigger white-text" href="#modalInicioSesion" *ngIf="!authService.userFlag">Iniciar Sesión</button></li>
           </ul>
           <ul id="nav-mobile" class="center col s2 offset-s1">
-          <li><button mat-button routerLink="/Register" routerLinkActive="active" class="white-text">Registro</button></li>
+              <li><button mat-button class="modal-trigger white-text" href="#modalRegistro" *ngIf="!authService.userFlag">Registrarse</button></li>
           </ul>
         </div>
         
       </div>
     </nav>
   </div>
+
+  <!-- ModalIS Structure -->
