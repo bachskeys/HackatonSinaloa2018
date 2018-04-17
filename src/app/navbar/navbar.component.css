@@ -5,7 +5,7 @@ a.slogan-sisei{
 color:black-text;
 position: absolute;
 left:600px;
-font-family: 'Rubik', sans-serif;
+font-family: 'Roboto', sans-serif;
 font-size: 35px;
 border-color: white;
 border-radius: 2px;
@@ -21,17 +21,43 @@ div.modal-overlay{
 
 #modalInicioSesion.modal{
 
- height:900px  !important ;
- width: 400px !important;
+ height:700px  !important ;
+ width: 300px !important;
 border-radius: 10px;
 
 }
 #modalRegistro.modal{
 
- height:900px  !important ;
- width: 400px !important;
+ height:700px  !important ;
+ width: 300px !important;
 border-radius: 10px;
+}
 
+.botonLoginFace{
+    height:30px  !important ;
+    width: 260px !important;
+    border-radius: 8px;
+    background-color: #395398;
+    font-size: 14px;
+    font-family: 'Roboto';
+}
 
+.botonLoginGmail{
+    height:30px  !important ;
+    width: 260px !important;
+    border-radius: 8px;
+    background-color: #C71610;
+    font-size: 14px;
+    font-family: 'Roboto';
+}
+
+.botonLogin{
+    height:40px  !important ;
+    width: 180px !important;
+    border-radius: 8px;
+    background-color: #00B524;
+    font-size: 14px;
+    font-family: 'Roboto';
+    align-content: center;
 }
 
