@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FBS} from './fbs'
+import {FbsService} from 'app/services/fbs.service'
 
 @Component({
   selector: 'app-assistentes ',
