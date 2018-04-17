@@ -28,6 +28,7 @@ import { AssistentesComponent } from './Body/assistentes/assistentes.component';
 import { FacebookService, InitParams } from 'ngx-facebook';
 
 import {FbsService} from './services/fbs.service';
+import { AuthService } from './services/auth.service';
 
 
 
@@ -61,7 +62,7 @@ const routes: Routes = [
     AngularFireStorageModule, // imports firebase/storage only needed for storage features
     
   ],
-  providers: [FbsService],
+  providers: [FbsService,AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
