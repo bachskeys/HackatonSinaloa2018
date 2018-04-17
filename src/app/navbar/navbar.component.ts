@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'app/services/auth.service';
 
 @Component({
   selector: 'app-navbar',
@@ -9,15 +10,13 @@ export class NavbarComponent implements OnInit {
 
 
 
-  constructor() { }
+  constructor(public authService: AuthService) { }
 
   ngOnInit() {
 
-
+	
   }
 
-    title = "Hackathon2018";
-   imagenes ={ img1:"src/assets/img/descarga.jpg"};
-
-
+    
+ 
 }

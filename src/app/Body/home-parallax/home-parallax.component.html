@@ -2,7 +2,7 @@
     
 <div id ="welcomeText"class="row"  >
 <div class="text col s4 offset-s4" style="border-radius:50px;">
-  <div id="modalInicioSesion" class="modal" materialize="modal" *ngIf="!user" >
+  <div id="modalInicioSesion" class="modal" materialize="modal" *ngIf="!authService.userFlag" >
     <div class="modal-content" >
       <h6 style="text-align: center" ><b>Iniciar Sesión</b></h6>
       <p class="row">
@@ -30,7 +30,7 @@
 </div>
 
 <!-- ModalR Structure -->
-<div id="modalRegistro" class="modal" materialize="modal" *ngIf="!user" >
+<div id="modalRegistro" class="modal" materialize="modal" *ngIf="!authService.userFlag" >
     <div class="modal-content">
       <h4>Modal Header</h4>
       <p>A bunch of text</p>
@@ -41,7 +41,7 @@
 </div>
 
             <h3 class="center"> Welcome!</h3> 
-      <nav *ngIf="user">
+      <nav *ngIf="authService.userFlag">
         <ul id="slide-out" class="side-nav fixed">
           <li  *ngFor="let routeName of routeNames" routerLinkActive="active"><a [routerLink]="[routeName]"></a></li>
         </ul>
