@@ -53,7 +53,8 @@
     </div>
 </div>
 
-            <h3 class="center"> Welcome!</h3> 
+            <h3 class="center" *ngIf="!authService.userFlag"> Welcome!</h3> 
+            <button *ngIf="authService.userFlag" (click)="logout()">Log out</button>
       <nav *ngIf="authService.userFlag">
         <ul id="slide-out" class="side-nav fixed">
           <li  *ngFor="let routeName of routeNames" routerLinkActive="active"><a [routerLink]="[routeName]"></a></li>

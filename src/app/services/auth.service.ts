@@ -42,8 +42,12 @@ export class AuthService {
 
   logout() {
     this.firebaseAuth
-      .auth
-      .signOut();
+    .auth.signOut().then(value => {
+    console.log('Sing out sucessful' value);
+    this.userFlag=false;
+}).catch(function(error) {
+  // An error happened.
+});
   }
   loginWithFaceBook(){
 
