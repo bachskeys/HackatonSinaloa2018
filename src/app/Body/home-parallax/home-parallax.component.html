@@ -4,7 +4,7 @@
 <div class="text col s4 offset-s4" style="border-radius:50px;">
   <div id="modalInicioSesion" class="modal" materialize="modal" *ngIf="!authService.userFlag" >
     <div class="modal-content" >
-      <h6 style="text-align: center" ><b>Iniciar Sesión</b></h6>
+      <h6 style="text-align: center; color: black" ><b>Iniciar Sesión</b></h6>
       <p class="row">
               <a style="align-content: center" class="waves-effect waves-light btn botonLoginFace" 
               (click)="loginWithFaceBook()"><i></i>Ingresar con Facebook</a> <BR> <BR>
@@ -32,11 +32,24 @@
 <!-- ModalR Structure -->
 <div id="modalRegistro" class="modal" materialize="modal" *ngIf="!authService.userFlag" >
     <div class="modal-content">
-      <h4>Modal Header</h4>
-      <p>A bunch of text</p>
-    </div>
-    <div class="modal-footer">
-      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+        <h6 style="text-align: center; color: black" ><b>Registro</b></h6>
+      <p class="row center">
+
+          <a>
+              <div class="row">
+                  <div class="input-field col s12">
+                    <input [(ngModel)]="email" id="email" type="email" class="validate" name="email">
+                    <label for="email">Email</label>
+                  </div>
+                  <div class="input-field col s12">
+                      <input [(ngModel)]="password" id="password" type="password" class="validate" name="password">
+                      <label for="password">Password</label>
+                  </div>
+              </div>
+          </a>
+          <a class="col s3 offset-s1 waves-effect waves-light btn botonCancelar" (click)="login()"><i class="material-icons left"   ></i>Cancelar</a>
+          <a class="col s3 offset-s1 waves-effect waves-light btn botonRegistrarse" (click)="login()"><i class="material-icons left"   ></i>Aceptar</a>       
+      </p>
     </div>
 </div>
 
