@@ -42,5 +42,16 @@ export class AuthService {
       .auth
       .signOut();
   }
+  loginWithFaceBook(){
+
+
+
+this.firebaseAuth.auth.signInWithPopup(new firebase.auth.FacebookAuthProvider()).then(value => {
+        console.log('Nice, it worked!',value);
+      })
+      .catch(err => {
+        console.log('Something went wrong:',err.message);
+      });
+  }
 
 }

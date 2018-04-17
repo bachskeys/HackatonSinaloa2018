@@ -1,60 +1,28 @@
-<div id="index-banner" class="parallax-container" >
-  <div class="section no-pad-bot">
-    <div class="container">
-      <br><br>
-
-      <div class="row center">
-        <div class="carousel carousel-slider center" materialize="carousel">
-            <ul class="pagination">
-              <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
-
-              <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
-            </ul>
-
-
+<div id="index-banner" class="container portada">
+      <BR>
+      <BR>
+      <BR>
+      <BR>
+      <BR>
+      <BR>
+      <BR>
+      <div class="text row">
+        <div class="col s6 ">
+            <h3> Welcome!</h3> 
         </div>
-
       </div>
-      </div>
-      <br><br>
-
-    </div>
-
-  <div class="parallax" materialize="parallax"><img src="/assets/img/mazatlan1.jpg" alt="Unsplashed background img 1"></div>
-  </div>
-
-  <div class="row">
-  <div class="col s7" *ngFor="let item of items | async">
-    <div class="card large">
-      <div class="card-image">
-        <img src={{item.Foto}}>
-        <span class="card-title">{{item.Nombre}}</span>
-      </div>
-      <div class="card-content">
-        <p>{{item.Descripcion}} <i class="material-icons  yellow-text text-darken-1 right">star star star star star_half</i>
-        </p>
-      </div>
-    </div>
-  </div>
-  <ul class="collection col s5">
-    <li class="collection-header"><h4>Precios</h4></li>
-    <li class="collection-item" *ngFor="let h of habitaciones | async">
-      <b class="title">{{h.Tipo}}</b>
-      <p>${{h.Precio}} la noche.</p>
-    </li>
-  </ul>
-  <ul class="collection col s5">
-    <li class="collection-header"><h4>Reseñas</h4></li>
-    <li class="collection-item avatar" *ngFor="let r of reviews | async">
-      <img src={{r.Imagen}} alt="" class="circle">
-      <p class="title">
-        <b>{{r.Autor}}</b> 
-        <span class="grey-text text-lighten-1 right">{{r.Fecha | date}}</span>
-      </p>
-      <p>{{r.Comentario}}</p>
-    </li>
-  </ul>
-  </div>
+        <BR>
+        <BR>
+        <BR>
+        <BR>
+        <BR>
+        <BR>
+        <BR>
+        <BR>
+        <BR>
+        <BR>
+        <BR>
+</div>
 
   
 

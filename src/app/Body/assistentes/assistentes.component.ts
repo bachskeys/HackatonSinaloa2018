@@ -27,4 +27,13 @@ export class AssistentesComponent {
   logout() {
     this.authService.logout();
   }
+  loginWithFaceBook(){
+
+
+   this.authService.loginWithFaceBook();
+
+
+  }
+
+
 }
