@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FbsService} from 'app/services/fbs.service'
+import { AuthService } from 'app/services/auth.service';
 
 @Component({
   selector: 'app-assistentes ',
@@ -7,12 +8,23 @@ import {FbsService} from 'app/services/fbs.service'
   styleUrls: ['./assistentes.component.css'],
    host: {'class': 'blue accent-1'}
 })
-export class AssistentesComponent implements OnInit {
+export class AssistentesComponent {
+  email: string;
+  password: string;
 
+  constructor(public authService: AuthService) {}
 
-  constructor() { }
-
-  ngOnInit() {
+  signup() {
+    this.authService.signup(this.email, this.password);
+    this.email = this.password = '';
   }
 
+  login() {
+    this.authService.login(this.email, this.password);
+    this.email = this.password = '';    
+  }
+
+  logout() {
+    this.authService.logout();
+  }
 }
