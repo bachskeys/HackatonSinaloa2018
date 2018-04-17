@@ -74,3 +74,23 @@ border-radius: 10px;
     align-content: center;
 }
 
+.botonRegistrarse{
+    height:40px  !important ;
+    width: 90px !important;
+    border-radius: 8px;
+    background-color: #00B524;
+    font-size: 14px;
+    font-family: 'Roboto';
+    align-content: center;
+}
+
+.botonCancelar{
+    height:40px  !important ;
+    width: 90px !important;
+    border-radius: 8px;
+    background-color: rgb(181, 6, 0);
+    font-size: 14px;
+    font-family: 'Roboto';
+    align-content: center;
+}
+

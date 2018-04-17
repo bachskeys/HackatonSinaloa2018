@@ -8,6 +8,7 @@ import { Observable } from 'rxjs/Observable';
 @Injectable()
 export class AuthService {
   user: Observable<firebase.User>;
+  userFlag:boolean;
 
   constructor(private firebaseAuth: AngularFireAuth) {
     this.user = firebaseAuth.authState;
@@ -19,6 +20,7 @@ export class AuthService {
       .createUserWithEmailAndPassword(email, password)
       .then(value => {
         console.log('Success!', value);
+        this.userFlag=true;
       })
       .catch(err => {
         console.log('Something went wrong:',err.message);
@@ -31,6 +33,7 @@ export class AuthService {
       .signInWithEmailAndPassword(email, password)
       .then(value => {
         console.log('Nice, it worked!');
+         this.userFlag=true;
       })
       .catch(err => {
         console.log('Something went wrong:',err.message);
@@ -48,6 +51,7 @@ export class AuthService {
 
 this.firebaseAuth.auth.signInWithPopup(new firebase.auth.FacebookAuthProvider()).then(value => {
         console.log('Nice, it worked!',value);
+         this.userFlag=true;
       })
       .catch(err => {
         console.log('Something went wrong:',err.message);
