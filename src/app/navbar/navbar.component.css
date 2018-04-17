@@ -10,6 +10,10 @@ font-size: 35px;
 border-color: white;
 border-radius: 2px;
 
-
-
+}
+.modal{
+    z-index: 1004;
+}
+div.modal-overlay{
+    z-index: 2 !important;
 }
