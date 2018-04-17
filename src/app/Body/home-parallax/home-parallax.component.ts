@@ -31,5 +31,8 @@ export class HomeParallaxComponent implements OnInit {
 	}
 
 	
-	
+	getUrl()
+{
+  return "url('assets/img/OCRS5G0.jpg')";
+}
 }

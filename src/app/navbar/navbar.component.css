@@ -10,6 +10,28 @@ font-size: 35px;
 border-color: white;
 border-radius: 2px;
 
+}
+.modal{
+    z-index: 1004;
+}
+div.modal-overlay{
+    z-index: 17500 !important;
+    
+}
+
+#modalInicioSesion.modal{
+
+ height:900px  !important ;
+ width: 400px !important;
+border-radius: 10px;
+
+}
+#modalRegistro.modal{
+
+ height:900px  !important ;
+ width: 400px !important;
+border-radius: 10px;
 
 
 }
+
