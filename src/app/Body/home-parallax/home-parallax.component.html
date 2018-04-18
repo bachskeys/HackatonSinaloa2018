@@ -52,17 +52,7 @@
       </p>
     </div>
 </div>
-
-            <h3 class="center" *ngIf="!authService.userFlag"> Welcome!</h3> 
-            <button *ngIf="authService.userFlag" (click)="logout()">Log out</button>
-      <nav *ngIf="authService.userFlag">
-        <ul id="slide-out" class="side-nav fixed">
-          <li  *ngFor="let routeName of routeNames" routerLinkActive="active"><a [routerLink]="[routeName]"></a></li>
-        </ul>
-        <a materialize="sideNav" [materializeParams]="[{edge:'left'}]" href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="mdi-navigation-menu"></i></a>
-        <a materialize="sideNav" [materializeParams]="[{edge:'left'}]" href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="mdi-navigation-menu"></i></a>
-      </nav>
-
+        <h3 class="center" *ngIf="!authService.userFlag"> Welcome!</h3> 
 
         </div>
       </div>
