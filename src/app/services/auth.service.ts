@@ -23,7 +23,7 @@ export class AuthService {
         console.log('Success!', value);
         this.userFlag=true;
         let newUser = this.db.collection<any>('Usuario');
-        newUser.add({email:email,password:password, Imagen: "https://firebasestorage.googleapis.com/v0/b/hackaton-17e3d.appspot.com/o/default-profile.png?alt=media&token=c68bc8b8-3da1-4cda-a89f-41cac7fd928b"});
+        newUser.add({Email:email,Password:password, Imagen: "https://firebasestorage.googleapis.com/v0/b/hackaton-17e3d.appspot.com/o/default-profile.png?alt=media&token=c68bc8b8-3da1-4cda-a89f-41cac7fd928b"});
       })
       .catch(err => {
         console.log('Something went wrong:',err.message);
