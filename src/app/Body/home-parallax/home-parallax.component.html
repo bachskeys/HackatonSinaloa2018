@@ -48,12 +48,13 @@
               </div>
           </a>
           <a class="col s3 offset-s1 waves-effect waves-light btn botonCancelar" (click)="login()"><i class="material-icons left"   ></i>Cancelar</a>
-          <a class="col s3 offset-s1 waves-effect waves-light btn botonRegistrarse" (click)="login()"><i class="material-icons left"   ></i>Aceptar</a>       
+          <a class="col s3 offset-s1 waves-effect waves-light btn botonRegistrarse" (click)="signup()"><i class="material-icons left"   ></i>Aceptar</a>       
       </p>
     </div>
 </div>
 
-            <h3 class="center"> Welcome!</h3> 
+            <h3 class="center" *ngIf="!authService.userFlag"> Welcome!</h3> 
+            <button *ngIf="authService.userFlag" (click)="logout()">Log out</button>
       <nav *ngIf="authService.userFlag">
         <ul id="slide-out" class="side-nav fixed">
           <li  *ngFor="let routeName of routeNames" routerLinkActive="active"><a [routerLink]="[routeName]"></a></li>
