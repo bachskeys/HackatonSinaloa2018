@@ -30,6 +30,9 @@ import { FacebookService, InitParams } from 'ngx-facebook';
 import {FbsService} from './services/fbs.service';
 import { AuthService } from './services/auth.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ListahotelesComponent } from './Body/listahoteles/listahoteles.component';
+import { Navbar2Component } from './navbar2/navbar2.component';
+import { ComentariosComponent } from './Body/comentarios/comentarios.component';
 
 
 
@@ -48,7 +51,10 @@ const routes: Routes = [
     FooterComponent,
     BodyComponent,
     HomeParallaxComponent,
-    AssistentesComponent
+    AssistentesComponent,
+    ListahotelesComponent,
+    Navbar2Component,
+    ComentariosComponent
   ],
   imports: [
   
