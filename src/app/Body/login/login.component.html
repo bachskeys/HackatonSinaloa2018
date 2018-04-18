@@ -1,0 +1,19 @@
+<div>
+  <div class="row">
+    <div class="portada col s9">
+                
+    </div>
+    <div class="col s3 grey darken-3" style="width: 341px; height: 1050px;">
+      
+                                                                                                       
+    </div>
+  </div>
+
+  <nav *ngIf="authService.userFlag">
+      <ul id="slide-out" class="side-nav fixed">
+        <li  *ngFor="let routeName of routeNames" routerLinkActive="active"><a [routerLink]="[routeName]"></a></li>
+      </ul>
+      <a materialize="sideNav" [materializeParams]="[{edge:'left'}]" href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="mdi-navigation-menu"></i></a>
+      <a materialize="sideNav" [materializeParams]="[{edge:'left'}]" href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="mdi-navigation-menu"></i></a>
+  </nav>
+</div>

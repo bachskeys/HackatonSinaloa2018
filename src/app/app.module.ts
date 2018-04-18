@@ -33,6 +33,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ListahotelesComponent } from './Body/listahoteles/listahoteles.component';
 import { Navbar2Component } from './navbar2/navbar2.component';
 import { ComentariosComponent } from './Body/comentarios/comentarios.component';
+import { LoginComponent } from './body/login/login.component';
 
 
 
@@ -54,7 +55,8 @@ const routes: Routes = [
     AssistentesComponent,
     ListahotelesComponent,
     Navbar2Component,
-    ComentariosComponent
+    ComentariosComponent,
+    LoginComponent
   ],
   imports: [
   
